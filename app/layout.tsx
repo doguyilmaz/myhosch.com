@@ -8,7 +8,7 @@ const inter = Inter({ subsets: ['latin'] });
 
 export function generateMetadata(): Metadata {
   const brand = getBrandConfig();
-  
+
   return {
     title: brand.title,
     description: brand.description,
@@ -18,11 +18,7 @@ export function generateMetadata(): Metadata {
   };
 }
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={inter.className}>

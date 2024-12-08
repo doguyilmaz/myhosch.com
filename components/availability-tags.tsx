@@ -1,13 +1,13 @@
 'use client';
 
-import { type BrandConfig } from '@/config/brand';
+import { BrandConfig } from '@/types/brand.type';
 import { useBrandColors } from '@/lib/use-brand-colors';
 import { useEffect, useState } from 'react';
 
 export function AvailabilityTags({ brand }: { brand: BrandConfig }) {
   const colors = useBrandColors(brand);
   const [mounted, setMounted] = useState(false);
-  
+
   useEffect(() => {
     setMounted(true);
   }, []);
@@ -18,7 +18,7 @@ export function AvailabilityTags({ brand }: { brand: BrandConfig }) {
   if (!mounted) {
     return (
       <div className="flex flex-wrap justify-center gap-2 mt-6">
-        {brand.status.availableFor.map((item) => (
+        {brand.status.availableFor.map(item => (
           <span key={item} className="text-sm px-3 py-1 rounded-full">
             {item}
           </span>
@@ -29,7 +29,7 @@ export function AvailabilityTags({ brand }: { brand: BrandConfig }) {
 
   return (
     <div className="flex flex-wrap justify-center gap-2 mt-6">
-      {brand.status.availableFor.map((item) => (
+      {brand.status.availableFor.map(item => (
         <span
           key={item}
           className="text-sm px-3 py-1 rounded-full"

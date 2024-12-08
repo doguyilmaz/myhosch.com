@@ -1,7 +1,7 @@
 'use client';
 
 import { Github, Twitter, Linkedin } from 'lucide-react';
-import { type BrandConfig } from '@/config/brand';
+import { type BrandConfig } from '@/types/brand.type';
 
 export function SocialLinks({ brand }: { brand: BrandConfig }) {
   return (

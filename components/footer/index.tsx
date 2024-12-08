@@ -1,6 +1,6 @@
 'use client';
 
-import { type BrandConfig } from '@/config/brand';
+import { type BrandConfig } from '@/types/brand.type';
 import { LegalLinks } from './legal-links';
 import { SocialLinks } from './social-links';
 

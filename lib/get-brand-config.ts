@@ -1,4 +1,5 @@
-import { brands, type BrandConfig } from '@/config/brand';
+import { brands } from '@/config/brand';
+import { BrandConfig } from '@/types/brand.type';
 
 export function getBrandConfig(): BrandConfig {
   // In a real environment, you might want to use environment variables

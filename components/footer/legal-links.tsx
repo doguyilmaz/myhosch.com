@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { type BrandConfig } from '@/config/brand';
+import { type BrandConfig } from '@/types/brand.type';
 
 export function LegalLinks({ brand }: { brand: BrandConfig }) {
   return (
