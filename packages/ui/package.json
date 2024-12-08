@@ -47,6 +47,8 @@
     "generate:component": "turbo gen react-component"
   },
   "devDependencies": {
+    "@repo/hooks": "workspace:*",
+    "@repo/lib": "workspace:*",
     "@hookform/resolvers": "^3.9.0",
     "@next/swc-wasm-nodejs": "13.5.1",
     "@radix-ui/react-accordion": "^1.2.0",
