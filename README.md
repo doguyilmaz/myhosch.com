@@ -1,5 +1,7 @@
 # Project Overview
 
+[myhosch.com](https://myhosch.com) · [archosch.com](https://archosch.com)
+
 A multi-purpose Next.js web application with dynamic configuration support and Vercel deployment.
 
 ## Key Features
@@ -26,9 +28,9 @@ NEXT_PUBLIC_BRAND=myhosch   # For MyHosch brand configuration
 
 ## Brand Details
 
-### MyHosch
+### Myhosch
 
-Visit the website: [myHosch.com](https://myhosch.com)
+Visit the website: [myhosch.com](https://myhosch.com)
 
 - **Title**: Myhosch
 - **Tagline**: Shaping Digital Dreams into Reality
@@ -40,9 +42,9 @@ Visit the website: [myHosch.com](https://myhosch.com)
   - [Twitter](https://twitter.com/myhosch)
 - **Available For**: Consulting, Development, Solutions, Creativity, Collaborations
 
-#### Why MyHosch?
+#### Why Myhosch?
 
-Step into the visionary world of **MyHosch**, where creativity meets technology. From cutting-edge development solutions to innovative experiments, MyHosch transforms ideas into reality. A hub for dreamers, builders, and creators.
+Step into the visionary world of **Myhosch**, where creativity meets technology. From cutting-edge development solutions to innovative experiments, Myhosch transforms ideas into reality. A hub for dreamers, builders, and creators.
 
 ---
 
