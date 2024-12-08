@@ -24,19 +24,19 @@ export const brands: Record<string, BrandConfig> = {
       email: 'hello@archosch.com',
       location: 'Worldwide',
       social: {
-        github: 'https://github.com/archosch',
+        github: 'https://github.com/myhosch',
       },
     },
     status: {
       message: 'Hosting archived resources for personal and shared use.',
       availableFor: ['Public Sharing', 'Archival Management'],
     },
-    showFooter: false,
+    showFooter: true,
     legal: {
       lastUpdated: '2024-01-01',
-      privacyPolicy: '/privacy-policy',
-      termsOfService: '/terms-of-service',
-      cookiePolicy: true,
+      privacyPolicy: false,
+      termsOfService: false,
+      cookiePolicy: false,
     },
   },
   myhosch: {
@@ -59,7 +59,7 @@ export const brands: Record<string, BrandConfig> = {
       darkAccent: '#064e3b',
     },
     contact: {
-      email: 'hello@myhosch.dev',
+      email: 'hello@myhosch.com',
       location: 'Istanbul, Turkey',
       social: {
         github: 'https://github.com/myhosch',
@@ -69,7 +69,7 @@ export const brands: Record<string, BrandConfig> = {
     },
     status: {
       message: 'Developing innovative projects and collaborating with like-minded creators.',
-      availableFor: ['Collaborations', 'Open Source Contributions', 'Creative Projects'],
+      availableFor: ['Consulting', 'Development', 'Solutions', 'Creativity', 'Collaborations'],
     },
     showFooter: false,
     legal: {

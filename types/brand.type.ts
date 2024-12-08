@@ -32,8 +32,8 @@ export type BrandConfig = {
   showFooter?: boolean;
   legal?: {
     lastUpdated?: string;
-    privacyPolicy?: string;
-    termsOfService?: string;
+    privacyPolicy?: string | false;
+    termsOfService?: string | false;
     cookiePolicy?: boolean;
   };
 };

@@ -8,7 +8,7 @@ export function Footer({ brand }: { brand: BrandConfig }) {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="w-full py-8 border-t">
+    <footer className="w-full py-8">
       <div className="container mx-auto px-4">
         <div className="flex flex-col items-center gap-6">
           <SocialLinks brand={brand} />
