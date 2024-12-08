@@ -1,81 +1,56 @@
-# Turborepo starter
+# Myhosch.com Monorepo
 
-This is an official starter Turborepo.
+A monorepo containing multiple Next.js applications and shared packages, built with Turborepo and pnpm.
 
-## Using this example
+## Applications
 
-Run the following command:
+### 1. Myhosch (Portfolio & Blog)
 
-```sh
-npx create-turbo@latest
-```
+- Personal portfolio and blog site
+- Features MDX support, dynamic OG images, and SEO optimization
+- Uses Tailwind CSS and Geist font
+- Port: 3000
 
-## What's inside?
+### 2. Docs
 
-This Turborepo includes the following packages/apps:
+- Documentation site
+- Uses shared UI components
+- Port: 3002
 
-### Apps and Packages
+### 3. Web
 
-- `docs`: a [Next.js](https://nextjs.org/) app
-- `web`: another [Next.js](https://nextjs.org/) app
-- `@repo/ui`: a stub React component library shared by both `web` and `docs` applications
-- `@repo/eslint-config`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
-- `@repo/typescript-config`: `tsconfig.json`s used throughout the monorepo
+- Web application with shared components
+- Port: 3001
 
-Each package/app is 100% [TypeScript](https://www.typescriptlang.org/).
+### 4. Random Wordle
 
-### Utilities
+- A Wordle game variant with different themes (Naruto, Bleach, One Piece, etc.)
+- Built with Mantine UI
+- Port: 3003
 
-This Turborepo has some additional tools already setup for you:
+## Shared Packages
 
-- [TypeScript](https://www.typescriptlang.org/) for static type checking
-- [ESLint](https://eslint.org/) for code linting
-- [Prettier](https://prettier.io) for code formatting
+### @repo/ui
 
-### Build
+- Shared UI components
+- Used across multiple applications
+- Includes button, card, and code components
 
-To build all apps and packages, run the following command:
+### @repo/eslint-config
 
-```
-cd my-turborepo
-pnpm build
-```
+- Shared ESLint configurations
+- Ensures consistent code style across all applications
 
-### Develop
+### @repo/typescript-config
 
-To develop all apps and packages, run the following command:
+- Shared TypeScript configurations
+- Provides base configurations for Next.js and React libraries
 
-```
-cd my-turborepo
-pnpm dev
-```
+## Getting Started
 
-### Remote Caching
+1. Prerequisites:
 
-Turborepo can use a technique known as [Remote Caching](https://turbo.build/repo/docs/core-concepts/remote-caching) to share cache artifacts across machines, enabling you to share build caches with your team and CI/CD pipelines.
+   - Node.js >= 18
+   - pnpm >= 8.15.6
 
-By default, Turborepo will cache locally. To enable Remote Caching you will need an account with Vercel. If you don't have an account you can [create one](https://vercel.com/signup), then enter the following commands:
-
-```
-cd my-turborepo
-npx turbo login
-```
-
-This will authenticate the Turborepo CLI with your [Vercel account](https://vercel.com/docs/concepts/personal-accounts/overview).
-
-Next, you can link your Turborepo to your Remote Cache by running the following command from the root of your Turborepo:
-
-```
-npx turbo link
-```
-
-## Useful Links
-
-Learn more about the power of Turborepo:
-
-- [Tasks](https://turbo.build/repo/docs/core-concepts/monorepos/running-tasks)
-- [Caching](https://turbo.build/repo/docs/core-concepts/caching)
-- [Remote Caching](https://turbo.build/repo/docs/core-concepts/remote-caching)
-- [Filtering](https://turbo.build/repo/docs/core-concepts/monorepos/filtering)
-- [Configuration Options](https://turbo.build/repo/docs/reference/configuration)
-- [CLI Usage](https://turbo.build/repo/docs/reference/command-line-reference)
+2. Install dependencies:
