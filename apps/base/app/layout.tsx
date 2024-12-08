@@ -2,7 +2,7 @@ import './globals.css';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import { Providers } from './providers';
-import { getBrandConfig } from '@/src/lib/get-brand-config';
+import { getBrandConfig } from '@repo/lib';
 
 const inter = Inter({ subsets: ['latin'] });
 

@@ -1,7 +1,6 @@
 'use client';
 
-import * as React from 'react';
-import type { BrandConfig } from '@repo/lib/types';
+import type { BrandConfig } from '@repo/lib';
 
 interface BrandHeaderProps {
   brand: BrandConfig;

@@ -1,4 +1,4 @@
-import { getBrandConfig } from '@/lib/get-brand-config';
+import { getBrandConfig } from '@repo/lib';
 import { BrandHeader } from '@repo/components/brand-header';
 import { StatusBadge } from '@repo/components/status-badge';
 import { ContactSection } from '@repo/components/contact-section';
