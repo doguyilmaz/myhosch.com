@@ -2,13 +2,7 @@
   "name": "@repo/ui",
   "version": "0.0.0",
   "private": true,
-  "types": "./src/index.ts",
   "exports": {
-    ".": "./src/index.ts",
-    "./types/toast": "./src/types/toast.ts",
-    "./toast": "./src/toast.tsx",
-    "./toaster": "./src/toaster.tsx",
-    "./types/*": "./src/types/*",
     "./accordion": "./src/accordion.tsx",
     "./alert": "./src/alert.tsx",
     "./alert-dialog": "./src/alert-dialog.tsx",
@@ -43,6 +37,7 @@
     "./table": "./src/table.tsx",
     "./tabs": "./src/tabs.tsx",
     "./textarea": "./src/textarea.tsx",
+    "./toast": "./src/toast.tsx",
     "./toggle": "./src/toggle.tsx",
     "./toggle-group": "./src/toggle-group.tsx",
     "./tooltip": "./src/tooltip.tsx"
