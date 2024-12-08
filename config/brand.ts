@@ -1,42 +1,4 @@
-export type BrandConfig = {
-  name: 'archosch' | 'myhosch';
-  title: string;
-  tagline: string;
-  description: string;
-  logo: {
-    icon: string;
-    text: string;
-  };
-  favicon?: string;
-  theme: {
-    primary: string;
-    secondary: string;
-    accent: string;
-    darkPrimary?: string;
-    darkSecondary?: string;
-    darkAccent?: string;
-  };
-  contact: {
-    email?: string;
-    location?: string;
-    social: {
-      github?: string;
-      twitter?: string;
-      linkedin?: string;
-    };
-  };
-  status: {
-    message: string;
-    availableFor?: string[];
-  };
-  showFooter?: boolean;
-  legal?: {
-    lastUpdated?: string;
-    privacyPolicy?: string;
-    termsOfService?: string;
-    cookiePolicy?: boolean;
-  };
-};
+import { BrandConfig } from '@/types/brand.type';
 
 export const brands: Record<string, BrandConfig> = {
   archosch: {
@@ -60,7 +22,7 @@ export const brands: Record<string, BrandConfig> = {
     },
     contact: {
       email: 'hello@archosch.com',
-      location: 'Anywhere',
+      location: 'Worldwide',
       social: {
         github: 'https://github.com/archosch',
       },
@@ -74,7 +36,7 @@ export const brands: Record<string, BrandConfig> = {
       lastUpdated: '2024-01-01',
       privacyPolicy: '/privacy-policy',
       termsOfService: '/terms-of-service',
-      cookiePolicy: false,
+      cookiePolicy: true,
     },
   },
   myhosch: {
