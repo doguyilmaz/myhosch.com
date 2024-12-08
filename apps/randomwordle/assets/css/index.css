@@ -1,7 +1,0 @@
-::root {
-  background-color: var(--mantine-color-dark) !important;
-}
-
-:where([data-mantine-color-scheme='dark']) .m_18320242:where([data-visible])::after {
-  background-color: orangered !important;
-}
