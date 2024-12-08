@@ -43,7 +43,8 @@ export const brands: Record<string, BrandConfig> = {
     name: 'archosch',
     title: 'Archosch',
     tagline: 'Archive of Digital Craftsmanship',
-    description: 'A curated collection of archived projects and experiments',
+    description:
+      'A repository of curated templates, resources, and experiments from various sources.',
     logo: {
       icon: 'Archive',
       text: 'archosch',
@@ -58,27 +59,30 @@ export const brands: Record<string, BrandConfig> = {
       darkAccent: '#1e3a8a',
     },
     contact: {
-      email: 'archive@archosch.dev',
-      location: 'Istanbul, Turkey',
+      email: 'hello@archosch.com',
+      location: 'Anywhere',
       social: {
         github: 'https://github.com/archosch',
       },
     },
     status: {
-      message: 'This domain hosts archived projects',
-      availableFor: ['Project Archival', 'Legacy Documentation'],
+      message: 'Hosting archived resources for personal and shared use.',
+      availableFor: ['Public Sharing', 'Archival Management'],
     },
     showFooter: false,
     legal: {
       lastUpdated: '2024-01-01',
+      privacyPolicy: '/privacy-policy',
+      termsOfService: '/terms-of-service',
       cookiePolicy: false,
     },
   },
   myhosch: {
     name: 'myhosch',
     title: 'Myhosch',
-    tagline: 'Crafting Digital Experiences',
-    description: 'Personal workspace for innovative projects and experiments',
+    tagline: 'Shaping Digital Dreams into Reality',
+    description:
+      'A personal space for crafting digital tools, templates, and innovative experiments.',
     logo: {
       icon: 'Rocket',
       text: 'myhosch',
@@ -96,18 +100,20 @@ export const brands: Record<string, BrandConfig> = {
       email: 'hello@myhosch.dev',
       location: 'Istanbul, Turkey',
       social: {
-        github: 'https://github.com/yourusername',
-        twitter: 'https://twitter.com/yourusername',
-        linkedin: 'https://linkedin.com/in/yourusername',
+        github: 'https://github.com/myhosch',
+        twitter: 'https://twitter.com/myhosch',
+        linkedin: 'https://linkedin.com/in/myhosch',
       },
     },
     status: {
-      message: 'Currently working on personal projects',
-      availableFor: ['Collaborations', 'Open Source', 'Side Projects'],
+      message: 'Developing innovative projects and collaborating with like-minded creators.',
+      availableFor: ['Collaborations', 'Open Source Contributions', 'Creative Projects'],
     },
-    showFooter: true,
+    showFooter: false,
     legal: {
       lastUpdated: '2024-01-01',
+      privacyPolicy: '/privacy-policy',
+      termsOfService: '/terms-of-service',
       cookiePolicy: true,
     },
   },
