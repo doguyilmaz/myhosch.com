@@ -13,7 +13,7 @@ export function Footer({ brand }: { brand: BrandConfig }) {
         <div className="flex flex-col items-center gap-6">
           <SocialLinks brand={brand} />
           <LegalLinks brand={brand} />
-          <div className="text-sm text-muted-foreground">
+          <div className="text-sm font-extralight text-muted-foreground">
             © {year} {brand.title}. All rights reserved.
           </div>
         </div>

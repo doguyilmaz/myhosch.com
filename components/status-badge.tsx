@@ -16,7 +16,7 @@ export function StatusBadge({ brand }: { brand: BrandConfig }) {
   // Don't render the badge with styles until mounted
   if (!mounted) {
     return (
-      <Badge variant="secondary" className="text-sm py-1 px-4">
+      <Badge variant="outline" className="text-sm py-1 px-4">
         {brand.status.message}
       </Badge>
     );
@@ -24,9 +24,9 @@ export function StatusBadge({ brand }: { brand: BrandConfig }) {
 
   return (
     <Badge
-      variant="secondary"
-      className="text-sm py-1 px-4"
-      style={{ backgroundColor: colors.accent, color: colors.primary }}
+      variant="outline"
+      className="text-md font-normal py-1 px-4"
+      style={{ color: colors.primary }}
     >
       {brand.status.message}
     </Badge>

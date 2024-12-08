@@ -19,7 +19,7 @@ export function AvailabilityTags({ brand }: { brand: BrandConfig }) {
     return (
       <div className="flex flex-wrap justify-center gap-2 mt-6">
         {brand.status.availableFor.map(item => (
-          <span key={item} className="text-sm px-3 py-1 rounded-full">
+          <span key={item} className="text-sm font-light px-3 py-1 rounded-full">
             {item}
           </span>
         ))}
@@ -32,7 +32,7 @@ export function AvailabilityTags({ brand }: { brand: BrandConfig }) {
       {brand.status.availableFor.map(item => (
         <span
           key={item}
-          className="text-sm px-3 py-1 rounded-full"
+          className="text-sm font-light px-3 py-1 rounded-full"
           style={{
             backgroundColor: colors.accent,
             color: colors.primary,

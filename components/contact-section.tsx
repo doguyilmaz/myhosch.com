@@ -9,7 +9,7 @@ export function ContactSection({ brand }: { brand: BrandConfig }) {
       {brand.contact.email && (
         <a
           href={`mailto:${brand.contact.email}`}
-          className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors"
+          className="flex items-center gap-2 font-extralight text-muted-foreground hover:text-primary transition-colors"
         >
           <Mail className="h-4 w-4" />
           <span>{brand.contact.email}</span>
@@ -17,7 +17,7 @@ export function ContactSection({ brand }: { brand: BrandConfig }) {
       )}
 
       {brand.contact.location && (
-        <div className="flex items-center gap-2 text-muted-foreground">
+        <div className="flex items-center gap-2 font-extralight text-muted-foreground">
           <MapPin className="h-4 w-4" />
           <span>{brand.contact.location}</span>
         </div>
@@ -28,7 +28,7 @@ export function ContactSection({ brand }: { brand: BrandConfig }) {
           href={brand.contact.social.github}
           target="_blank"
           rel="noopener noreferrer"
-          className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors"
+          className="flex items-center gap-2 font-extralight text-muted-foreground hover:text-primary transition-colors"
         >
           <Github className="h-4 w-4" />
           <span>GitHub</span>
