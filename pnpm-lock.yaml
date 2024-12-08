@@ -23,6 +23,9 @@ importers:
 
   apps/base:
     dependencies:
+      '@repo/components':
+        specifier: workspace:*
+        version: link:../../packages/components
       '@repo/hooks':
         specifier: workspace:*
         version: link:../../packages/hooks

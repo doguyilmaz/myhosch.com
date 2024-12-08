@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@repo/components": "workspace:*",
     "@repo/ui": "workspace:*",
     "@repo/hooks": "workspace:*",
     "@repo/lib": "workspace:*",
