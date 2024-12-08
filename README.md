@@ -1,56 +1,88 @@
-# Myhosch.com Monorepo
+# Project Overview
 
-A monorepo containing multiple Next.js applications and shared packages, built with Turborepo and pnpm.
+This repository is a multi-purpose project that leverages Next.js for dynamic, scalable web applications. The setup is tailored to support customizable page configurations and seamless deployment via Vercel.
 
-## Applications
+## Features
 
-### 1. Myhosch (Portfolio & Blog)
+- **Dynamic Configuration**: Centralized configuration management via custom `config` files.
+- **Multi-Purpose Pages**: Flexible pages that adapt based on the provided configuration.
+- **Tailwind CSS Integration**: Simplified and efficient styling with Tailwind CSS.
+- **Environment Variables**: Enhanced functionality powered by `.env` files.
+- **Vercel Deployment**: Optimized for quick deployment and scalability on Vercel.
 
-- Personal portfolio and blog site
-- Features MDX support, dynamic OG images, and SEO optimization
-- Uses Tailwind CSS and Geist font
-- Port: 3000
+## Installation
 
-### 2. Docs
+1. Clone the repository:
+   ```bash
+   git clone <repository-url>
+   ```
+2. Navigate to the project directory:
+   ```bash
+   cd <repository-name>
+   ```
+3. Install dependencies:
+   ```bash
+   npm install
+   ```
 
-- Documentation site
-- Uses shared UI components
-- Port: 3002
+## Configuration
 
-### 3. Web
+### Environment Variables
 
-- Web application with shared components
-- Port: 3001
+Environment variables are essential for dynamic configurations. Copy the `.env.local` file and modify as needed:
 
-### 4. Random Wordle
+```bash
+cp .env.local.example .env.local
+```
 
-- A Wordle game variant with different themes (Naruto, Bleach, One Piece, etc.)
-- Built with Mantine UI
-- Port: 3003
+Key variables include:
 
-## Shared Packages
+- `API_BASE_URL`: Base URL for API endpoints.
+- `NEXT_PUBLIC_BRAND_CONFIG`: Points to the brand-specific configuration.
 
-### @repo/ui
+### Config Files
 
-- Shared UI components
-- Used across multiple applications
-- Includes button, card, and code components
+- **`config/brand.ts`**: Defines brand-specific settings.
+- **`lib/get-brand-config.ts`**: Utility to fetch and parse configuration dynamically.
 
-### @repo/eslint-config
+## Running Locally
 
-- Shared ESLint configurations
-- Ensures consistent code style across all applications
+1. Start the development server:
+   ```bash
+   npm run dev
+   ```
+2. Open [http://localhost:3000](http://localhost:3000) to view the application.
 
-### @repo/typescript-config
+## Deployment on Vercel
 
-- Shared TypeScript configurations
-- Provides base configurations for Next.js and React libraries
+### Setting Up Environment Variables
 
-## Getting Started
+1. Go to your Vercel dashboard.
+2. Navigate to the project settings.
+3. Add the necessary environment variables listed in the `.env.local` file.
 
-1. Prerequisites:
+### Deploying
 
-   - Node.js >= 18
-   - pnpm >= 8.15.6
+1. Push your changes to the repository:
+   ```bash
+   git push origin main
+   ```
+2. Vercel automatically triggers a deployment for the main branch.
 
-2. Install dependencies:
+## Directory Structure
+
+- **`config/`**: Contains configuration files.
+- **`lib/`**: Contains utility functions, including `get-brand-config.ts`.
+- **`pages/`**: Contains Next.js pages for the application.
+- **`styles/`**: Tailwind CSS and other styling files.
+
+## Scripts
+
+- `npm run dev`: Starts the development server.
+- `npm run build`: Builds the application for production.
+- `npm run start`: Starts the production server.
+
+## License
+
+This project is licensed under the MIT License. See the LICENSE file for details.
+
