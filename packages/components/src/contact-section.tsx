@@ -1,37 +1,53 @@
 'use client';
 
-import { Mail, MapPin, Github } from 'lucide-react';
-import { type BrandConfig } from '@/config/brand';
+import * as React from 'react';
+import type { BrandConfig } from '@repo/lib/types';
 
-export function ContactSection({ brand }: { brand: BrandConfig }) {
+interface ContactSectionProps {
+  brand: BrandConfig;
+}
+
+export function ContactSection({ brand }: ContactSectionProps) {
+  if (!brand.contact) return null;
+
   return (
-    <div className="flex flex-col items-center gap-4 mt-8">
+    <div className='flex gap-4 justify-center mt-8'>
       {brand.contact.email && (
         <a
           href={`mailto:${brand.contact.email}`}
-          className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors"
+          className='text-muted-foreground hover:text-foreground'
         >
-          <Mail className="h-4 w-4" />
-          <span>{brand.contact.email}</span>
+          Email
         </a>
       )}
-      
-      {brand.contact.location && (
-        <div className="flex items-center gap-2 text-muted-foreground">
-          <MapPin className="h-4 w-4" />
-          <span>{brand.contact.location}</span>
-        </div>
-      )}
-
-      {brand.contact.social.github && (
+      {brand.contact.twitter && (
         <a
-          href={brand.contact.social.github}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors"
+          href={`https://twitter.com/${brand.contact.twitter}`}
+          target='_blank'
+          rel='noopener noreferrer'
+          className='text-muted-foreground hover:text-foreground'
         >
-          <Github className="h-4 w-4" />
-          <span>GitHub</span>
+          Twitter
+        </a>
+      )}
+      {brand.contact.github && (
+        <a
+          href={`https://github.com/${brand.contact.github}`}
+          target='_blank'
+          rel='noopener noreferrer'
+          className='text-muted-foreground hover:text-foreground'
+        >
+          GitHub
+        </a>
+      )}
+      {brand.contact.linkedin && (
+        <a
+          href={`https://linkedin.com/in/${brand.contact.linkedin}`}
+          target='_blank'
+          rel='noopener noreferrer'
+          className='text-muted-foreground hover:text-foreground'
+        >
+          LinkedIn
         </a>
       )}
     </div>

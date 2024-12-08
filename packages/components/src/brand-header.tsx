@@ -1,31 +1,17 @@
 'use client';
 
-import { Icon } from 'lucide-react';
-import * as Icons from 'lucide-react';
-import { type BrandConfig } from '@/config/brand';
-import { ThemeSwitcher } from './theme-switcher';
+import * as React from 'react';
+import type { BrandConfig } from '@repo/lib/types';
 
-export function BrandHeader({ brand }: { brand: BrandConfig }) {
-  const LogoIcon = Icons[brand.logo.icon as keyof typeof Icons];
+interface BrandHeaderProps {
+  brand: BrandConfig;
+}
 
+export function BrandHeader({ brand }: BrandHeaderProps) {
   return (
-    <header className="w-full py-6">
-      <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between">
-          <div className="flex items-center gap-2">
-            <LogoIcon
-              className="h-8 w-8"
-              style={{ color: brand.theme.primary }}
-            />
-            <span
-              className="text-2xl font-bold"
-              style={{ color: brand.theme.primary }}
-            >
-              {brand.logo.text}
-            </span>
-          </div>
-          <ThemeSwitcher />
-        </div>
+    <header className='w-full border-b'>
+      <div className='container mx-auto px-4 py-4'>
+        <h1 className='text-xl font-semibold'>{brand.title}</h1>
       </div>
     </header>
   );

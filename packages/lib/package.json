@@ -6,26 +6,15 @@
   "types": "./src/index.ts",
   "exports": {
     ".": "./src/index.ts",
-    "./utils": "./src/utils.ts",
-    "./hooks": "./src/hooks.ts",
-    "./brand": "./src/brand.ts"
-  },
-  "scripts": {
-    "lint": "eslint . --max-warnings 0",
-    "type-check": "tsc --noEmit"
+    "./types": "./src/types.ts",
+    "./utils": "./src/utils.ts"
   },
   "dependencies": {
-    "@repo/ui": "workspace:*",
-    "clsx": "^2.1.1",
-    "next-themes": "^0.3.0",
-    "tailwind-merge": "^2.5.2"
+    "clsx": "^2.0.0",
+    "tailwind-merge": "^2.0.0"
   },
   "devDependencies": {
-    "@repo/eslint-config": "workspace:*",
     "@repo/typescript-config": "workspace:*",
-    "@types/node": "^20",
-    "@types/react": "^18",
-    "@types/react-dom": "^18",
-    "typescript": "^5.3.3"
+    "typescript": "^5.2.2"
   }
 }

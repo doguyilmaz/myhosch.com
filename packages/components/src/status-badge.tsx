@@ -1,30 +1,25 @@
 'use client';
 
-import { Badge } from '@/components/ui/badge';
-import { type BrandConfig } from '@/config/brand';
-import { useBrandColors } from '@/lib/use-brand-colors';
-import { useEffect, useState } from 'react';
+import * as React from 'react';
+import type { BrandConfig } from '@repo/lib/types';
+import { cn } from '@repo/lib/utils';
 
-export function StatusBadge({ brand }: { brand: BrandConfig }) {
-  const colors = useBrandColors(brand);
-  const [mounted, setMounted] = useState(false);
+interface StatusBadgeProps {
+  brand: BrandConfig;
+}
 
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-
-  // Don't render the badge with styles until mounted
-  if (!mounted) {
-    return <Badge variant="secondary" className="text-sm py-1 px-4">{brand.status.message}</Badge>;
-  }
+export function StatusBadge({ brand }: StatusBadgeProps) {
+  if (!brand.status) return null;
 
   return (
-    <Badge
-      variant="secondary"
-      className="text-sm py-1 px-4"
-      style={{ backgroundColor: colors.accent, color: colors.primary }}
+    <span
+      className={cn('inline-flex items-center px-3 py-1 rounded-full text-sm font-medium', {
+        'bg-green-100 text-green-800': brand.status.type === 'success',
+        'bg-yellow-100 text-yellow-800': brand.status.type === 'warning',
+        'bg-red-100 text-red-800': brand.status.type === 'error',
+      })}
     >
-      {brand.status.message}
-    </Badge>
+      {brand.status.text}
+    </span>
   );
 }

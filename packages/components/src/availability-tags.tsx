@@ -1,44 +1,20 @@
 'use client';
 
-import { type BrandConfig } from '@/config/brand';
-import { useBrandColors } from '@/lib/use-brand-colors';
-import { useEffect, useState } from 'react';
+import * as React from 'react';
+import type { BrandConfig } from '@repo/lib/types';
 
-export function AvailabilityTags({ brand }: { brand: BrandConfig }) {
-  const colors = useBrandColors(brand);
-  const [mounted, setMounted] = useState(false);
-  
-  useEffect(() => {
-    setMounted(true);
-  }, []);
+interface AvailabilityTagsProps {
+  brand: BrandConfig;
+}
 
-  if (!brand.status.availableFor?.length) return null;
-
-  // Don't render with styles until mounted
-  if (!mounted) {
-    return (
-      <div className="flex flex-wrap justify-center gap-2 mt-6">
-        {brand.status.availableFor.map((item) => (
-          <span key={item} className="text-sm px-3 py-1 rounded-full">
-            {item}
-          </span>
-        ))}
-      </div>
-    );
-  }
+export function AvailabilityTags({ brand }: AvailabilityTagsProps) {
+  if (!brand.availability?.length) return null;
 
   return (
-    <div className="flex flex-wrap justify-center gap-2 mt-6">
-      {brand.status.availableFor.map((item) => (
-        <span
-          key={item}
-          className="text-sm px-3 py-1 rounded-full"
-          style={{
-            backgroundColor: colors.accent,
-            color: colors.primary,
-          }}
-        >
-          {item}
+    <div className='flex flex-wrap gap-2 justify-center'>
+      {brand.availability.map((tag) => (
+        <span key={tag} className='px-3 py-1 bg-muted text-muted-foreground rounded-full text-sm'>
+          {tag}
         </span>
       ))}
     </div>
